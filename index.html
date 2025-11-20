@@ -1,8 +1,168 @@
-<img src="https://i.ibb.co/z9dKSRk/Whats-App-Image-2025-11-20-at-14-24-17-0abb1809.jpg" 
-     alt="Logo" 
-     style="width:150px; height:150px; border-radius:50%; border:4px solid white; object-fit:cover;">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WORK TAP — Main Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+        }
 
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background: #b30000;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 25px 20px;
+            box-shadow: 3px 0 10px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* LOGO + NAME */
+        .logo-box {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .logo-box img {
+            width: 150px;        /* Увеличенный размер */
+            height: 150px;       /* Увеличенный размер */
+            border-radius: 50%;  /* Идеальный круг */
+            border: 4px solid white;
+            object-fit: cover;
+            background: white;
+        }
+
+        .company-name {
+            margin-top: 15px;
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        /* Menu */
+        .menu a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            transition: 0.2s;
+        }
+
+        .menu a:hover {
+            background: #ff4040;
+        }
+
+        /* Contacts bottom */
+        .contact-box {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ffffff;  /* Белый цвет текста */
+        }
+
+        .contact-box a {
+            color: #ffffff;  /* Белый цвет ссылок */
+            text-decoration: underline;
+        }
+
+        /* Content */
+        .content {
+            margin-left: 260px;
+            padding: 50px;
+        }
+
+        h1.title {
+            color: #b30000;
+            font-size: 60px;
+            margin-bottom: 10px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 700px;
+        }
+
+        /* Time (right top corner) */
+        .time-box {
+            position: fixed;
+            right: 25px;
+            top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #b30000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- RIGHT TOP CLOCK -->
+    <div class="time-box" id="clock">00:00:00</div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let h = String(now.getHours()).padStart(2, '0');
+            let m = String(now.getMinutes()).padStart(2, '0');
+            let s = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById("clock").innerText = `${h}:${m}:${s}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+    <div class="sidebar">
+
+        <div class="top-section">
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <img src="WhatsApp Image 2025-11-20 at 14.24.17_0abb1809.jpg" alt="Logo">
+                <div class="company-name">WORK TAP</div>
+            </div>
+
+            <div class="menu">
+                <a href="project.html">Проект</a>
+                <a href="schedule.html">Кесте</a>
+                <a href="lessons.html">Сабақтар</a>
+            </div>
+
+        </div>
+
+        <!-- CONTACTS -->
+        <div class="contact-box">
+            <p>Email: <a href="mailto:simplexo36@gmail.com">simplexo36@gmail.com</a></p>
+            <p>Phone: +7 778 651 93 37</p>
+            <p>Telegram bot: <a href="#" id="tg-link">Add link</a></p>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <h1 class="title">WORK TAP</h1>
+        <p>WORK TAP — жастарға арналған заманауи жұмыс және білім алаңы.
+Бұл жерде сен өз жобаларыңды басқаруға, сабақтарыңды жоспарлауға және күнделікті тапсырмаларды тиімді орындауға мүмкіндік аласың.
+Барлығы бір жерде. Барлығы сен үшін.</p>
+    </div>
+
+</body>
 </html>
+
 
 
 
