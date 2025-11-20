@@ -4,20 +4,82 @@
     <title>Lessons</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             margin: 40px;
             background: #ffffff;
         }
+
         h1 {
             color: #b30000;
+            font-size: 36px;
+            margin-bottom: 30px;
         }
-        p {
-            font-size: 18px;
+
+        .lessons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .lesson {
+            flex: 1 1 calc(33% - 20px); /* три блока в ряд */
+            min-width: 200px;
+            padding: 30px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 12px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        /* Дизайн блоков */
+        .lesson-white {
+            background: #ffffff;
+            color: #b30000;
+            border: 2px solid #b30000;
+        }
+
+        .lesson-white:hover {
+            background: #b30000;
+            color: #ffffff;
+        }
+
+        .lesson-red {
+            background: #b30000;
+            color: #ffffff;
+            border: 2px solid #b30000;
+        }
+
+        .lesson-red:hover {
+            background: #ffffff;
+            color: #b30000;
+        }
+
+        @media (max-width: 900px) {
+            .lesson {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .lesson {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Lessons</h1>
-    <p>Your lesson information goes here...</p>
+    <div class="lessons-container">
+        <div class="lesson lesson-white">Python</div>
+        <div class="lesson lesson-red">Excel</div>
+        <div class="lesson lesson-white">PowerPoint</div>
+        <div class="lesson lesson-red">Canva</div>
+        <div class="lesson lesson-white">AI/HTML</div>
+        <div class="lesson lesson-red">Word</div>
+    </div>
 </body>
 </html>
+
+
