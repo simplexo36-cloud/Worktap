@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main Page</title>
+    <title>WORK TAP — Main Page</title>
     <style>
         body {
             margin: 0;
@@ -11,9 +11,9 @@
 
         /* Sidebar */
         .sidebar {
-            width: 240px;
+            width: 260px;
             height: 100vh;
-            background: #b30000; /* Professional dark red */
+            background: #b30000;
             color: white;
             position: fixed;
             left: 0;
@@ -29,26 +29,35 @@
             flex-grow: 1;
         }
 
-        .logo-box {
+        /* LOGO + NAME BOX */
+        .logo-wrapper {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
-        .logo-box img {
-            width: 120px;              /* Increased size slightly */
-            height: 120px;
-            border-radius: 50%;        /* круглый */
-            border: 4px solid white;   /* cleaner white border */
+        .logo-wrapper img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
             object-fit: cover;
+            border: 5px solid white;
             background: white;
         }
 
+        .company-name {
+            margin-top: 15px;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        /* Menu */
         .menu a {
             display: block;
-            color: #ffffff;              /* brighter white */
+            color: #ffffff;
             text-decoration: none;
-            padding: 14px 10px;
-            font-size: 19px;             /* slightly larger */
+            padding: 14px 12px;
+            font-size: 19px;
             font-weight: bold;
             border-radius: 6px;
             margin-bottom: 12px;
@@ -56,15 +65,15 @@
         }
 
         .menu a:hover {
-            background: #ff4040;         /* brighter hover red */
+            background: #ff4040;
         }
 
-        /* Contact section */
+        /* Contact bottom */
         .contact-box {
             margin-top: 20px;
             font-size: 14px;
             line-height: 1.7;
-            color: #ffffff;              /* pure white */
+            color: #ffffff;
         }
 
         .contact-box a {
@@ -72,29 +81,30 @@
             text-decoration: underline;
         }
 
-        /* Content area */
+        /* Main content */
         .content {
-            margin-left: 260px;
-            padding: 40px;
+            margin-left: 290px;
+            padding: 50px;
         }
 
         h1.title {
             color: #b30000;
-            font-size: 52px;             /* bigger WORK TAP */
-            margin-bottom: 10px;
+            font-size: 60px;
+            margin-bottom: 5px;
             font-weight: 900;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
-        h1.sub {
+        h2.sub {
             color: #b30000;
-            font-size: 32px;
+            font-size: 34px;
             margin-top: 0;
         }
 
         p {
             font-size: 18px;
             color: #333;
+            width: 650px;
         }
 
     </style>
@@ -104,32 +114,38 @@
     <div class="sidebar">
 
         <div class="top-section">
-            <div class="logo-box">
-                <!-- Your logo -->
+
+            <!-- LOGO + NAME -->
+            <div class="logo-wrapper">
                 <img src="WhatsApp Image 2025-11-20 at 14.24.15 (1).jpeg" alt="Logo">
+                <div class="company-name">WORK TAP</div>
             </div>
 
             <div class="menu">
                 <a href="project.html">Project</a>
                 <a href="schedule.html">Schedule</a>
                 <a href="lessons.html">Lessons</a>
+                <a href="profile.html">Profile</a>
             </div>
         </div>
 
-        <!-- CONTACTS AT BOTTOM -->
+        <!-- CONTACT -->
         <div class="contact-box">
             <p>Email: <a href="mailto:simplexo36@gmail.com">simplexo36@gmail.com</a></p>
             <p>Phone: +7 778 *** ** **</p>
-            <p>Telegram bot: <a href="#" id="tg-link">Add link later</a></p>
+            <p>Telegram Bot: <a href="#" id="tg-link">Add link later</a></p>
         </div>
 
     </div>
 
     <div class="content">
         <h1 class="title">WORK TAP.</h1>
-        <h1 class="sub">Welcome to your Dashboard</h1>
-        <p>Your professional website is ready. Choose a section from the left menu.</p>
+        <h2 class="sub">Welcome to Your Dashboard</h2>
+        <p>Choose your section from the menu on the left.  
+           Manage projects, schedule your lessons, track progress — all in one place.</p>
     </div>
 
 </body>
 </html>
+
+
