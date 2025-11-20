@@ -1,23 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Project</title>
+    <title>Жобалар</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             margin: 40px;
             background: #ffffff;
         }
+
         h1 {
             color: #b30000;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
         }
-        p {
-            font-size: 18px;
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .project {
+            flex: 1 1 calc(33% - 25px); /* три блока в ряд */
+            min-width: 220px;
+            padding: 40px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 12px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        /* Дизайн блоков */
+        .project-white {
+            background: #ffffff;
+            color: #b30000;
+            border: 2px solid #b30000;
+        }
+
+        .project-white:hover {
+            background: #b30000;
+            color: #ffffff;
+        }
+
+        .project-red {
+            background: #b30000;
+            color: #ffffff;
+            border: 2px solid #b30000;
+        }
+
+        .project-red:hover {
+            background: #ffffff;
+            color: #b30000;
+        }
+
+        @media (max-width: 900px) {
+            .project {
+                flex: 1 1 calc(50% - 25px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .project {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Project</h1>
-    <p>Your project details go here...</p>
+    <h1>Жобалар</h1>
+    <div class="projects-container">
+        <div class="project project-white">Python жобасы</div>
+        <div class="project project-red">Excel жобасы</div>
+        <div class="project project-white">PowerPoint жобасы</div>
+        <div class="project project-red">Canva жобасы</div>
+        <div class="project project-white">AI/HTML жобасы</div>
+        <div class="project project-red">Word жобасы</div>
+    </div>
 </body>
 </html>
+
+
