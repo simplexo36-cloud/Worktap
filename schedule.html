@@ -1,23 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="kk">
 <head>
-    <title>Schedule</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 40px;
-            background: #ffffff;
-        }
-        h1 {
-            color: #b30000;
-        }
-        p {
-            font-size: 18px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кесте МЕК-233</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #b30000;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    #clock {
+      font-size: 20px;
+      font-weight: bold;
+      color: #b30000;
+    }
+
+    .day {
+      margin-bottom: 25px;
+    }
+
+    .day-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #b30000;
+    }
+
+    .lesson {
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      line-height: 1.4;
+      background: #b30000;
+      color: #ffffff;
+      border: 2px solid #b30000;
+    }
+  </style>
 </head>
 <body>
-    <h1>Schedule</h1>
-    <p>Your schedule goes here...</p>
+  <header>
+    <h1>Кесте МЕК-233</h1>
+    <div id="clock">00:00:00</div>
+  </header>
+
+  <!-- Дүйсенбі -->
+  <div class="day">
+    <div class="day-title">Дүйсенбі</div>
+    <div class="lesson">14:00 - 14:50<br>Қаржылық сауаттылық негіздері (сем)<br>320</div>
+    <div class="lesson">15:00 - 15:50<br>Қаржылық сауаттылық негіздері (сем)<br>406</div>
+    
+
+  <!-- Сейсенбі -->
+  <div class="day">
+    <div class="day-title">Сейсенбі (Online) </div>
+    <div class="lesson">9:00 - 10:00<br>Minor пәні-2 / Инклюзияланған орталар (лек)<br></div>
+    <div class="lesson">13:00 - 14:00<br>Қаржылық сауаттылық негіздері (лек)<br></div>
+  </div>
+
+  <!-- Сәрсенбі -->
+  <div class="day">
+    <div class="day-title">Сәрсенбі</div>
+    <div class="lesson">10:00 - 12:00<br>Minor пәні-2 / Білім беру теориялары (сем)<br>316</div>
+    <div class="lesson">12:00 - 14:00<br>Нақты айнымалы (сем)<br>320</div>
+    <div class="lesson">14:00 - 15:50<br>Есептеу математикасының негіздері (сем)<br>109, 113</div>
+    
+  </div>
+
+  <!-- Бейсенбі -->
+  <div class="day">
+    <div class="day-title">Бейсенбі</div>
+    <div class="lesson">12:00 - 13:50<br>Интегралдық теңдеулер (сем)<br>316</div>
+    <div class="lesson">14:00 - 14:50<br>Нақты айнымалы (лек)<br>221</div>
+    <div class="lesson">17:00 - 17:50<br>Интегралдық теңдеулер (лек)<br>319</div>
+    <div class="lesson">18:00 - 18:50<br>Есептеу математикасының негіздері (лек)<br>221</div>
+  </div>
+
+  <!-- Жұма -->
+  <div class="day">
+    <div class="day-title">Жұма</div>
+    <div class="lesson">10:00 - 11:00<br>Минор 1  (лек)<br>(Online)</div>
+    <div class="lesson">14:00 - 16:00<br>Минор 1 (сем)<br>115, 107</div>
+  </div>
+
+ 
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let h = String(now.getHours()).padStart(2, '0');
+      let m = String(now.getMinutes()).padStart(2, '0');
+      let s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').innerText = `${h}:${m}:${s}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
+
