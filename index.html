@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background: #b30000; /* Professional dark red */
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 25px 20px;
+            box-shadow: 3px 0 10px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .top-section {
+            flex-grow: 1;
+        }
+
+        .logo-box {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-box img {
+            width: 120px;              /* Increased size slightly */
+            height: 120px;
+            border-radius: 50%;        /* круглый */
+            border: 4px solid white;   /* cleaner white border */
+            object-fit: cover;
+            background: white;
+        }
+
+        .menu a {
+            display: block;
+            color: #ffffff;              /* brighter white */
+            text-decoration: none;
+            padding: 14px 10px;
+            font-size: 19px;             /* slightly larger */
+            font-weight: bold;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            transition: 0.2s;
+        }
+
+        .menu a:hover {
+            background: #ff4040;         /* brighter hover red */
+        }
+
+        /* Contact section */
+        .contact-box {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #ffffff;              /* pure white */
+        }
+
+        .contact-box a {
+            color: #ffecec;
+            text-decoration: underline;
+        }
+
+        /* Content area */
+        .content {
+            margin-left: 260px;
+            padding: 40px;
+        }
+
+        h1.title {
+            color: #b30000;
+            font-size: 52px;             /* bigger WORK TAP */
+            margin-bottom: 10px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        h1.sub {
+            color: #b30000;
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+
+        <div class="top-section">
+            <div class="logo-box">
+                <!-- Your logo -->
+                <img src="WhatsApp Image 2025-11-20 at 14.24.15 (1).jpeg" alt="Logo">
+            </div>
+
+            <div class="menu">
+                <a href="project.html">Project</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="lessons.html">Lessons</a>
+            </div>
+        </div>
+
+        <!-- CONTACTS AT BOTTOM -->
+        <div class="contact-box">
+            <p>Email: <a href="mailto:simplexo36@gmail.com">simplexo36@gmail.com</a></p>
+            <p>Phone: +7 778 *** ** **</p>
+            <p>Telegram bot: <a href="#" id="tg-link">Add link later</a></p>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <h1 class="title">WORK TAP.</h1>
+        <h1 class="sub">Welcome to your Dashboard</h1>
+        <p>Your professional website is ready. Choose a section from the left menu.</p>
+    </div>
+
+</body>
+</html>
