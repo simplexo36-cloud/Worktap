@@ -26,6 +26,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.3s;
+    z-index: 1000;
 }
 
 .logo-box {
@@ -99,6 +100,7 @@ p {
     font-size: 24px;
     font-weight: bold;
     color: #b30000;
+    z-index: 1001;
 }
 
 .tg-button {
@@ -141,18 +143,14 @@ p {
     font-size: 28px;
     color: #b30000;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1002;
+    transition: color 0.3s;
 }
 
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) {
-    .sidebar {
-        width: 200px;
-    }
-    .content {
-        margin-left: 220px;
-        padding: 20px;
-    }
+    .sidebar { width: 200px; }
+    .content { margin-left: 220px; padding: 20px; }
 }
 
 @media screen and (max-width: 768px) {
@@ -165,21 +163,11 @@ p {
         flex-direction: column;
         padding: 25px 20px;
         box-shadow: 3px 0 10px rgba(0,0,0,0.2);
-        z-index: 1000;
     }
-    .sidebar.active {
-        left: 0;
-    }
-    .logo-box {
-        display: block;
-    }
-    .content {
-        margin-left: 0;
-        padding: 20px;
-    }
-    .menu-toggle {
-        display: block;
-    }
+    .sidebar.active { left: 0; }
+    .logo-box { display: block; }
+    .content { margin-left: 0; padding: 20px; }
+    .menu-toggle { display: block; }
 }
 
 @media screen and (max-width: 480px) {
@@ -258,16 +246,23 @@ setInterval(() => {
     document.getElementById("slide-img").src = images[current];
 }, 3000);
 
-// Toggle sidebar on mobile
+// Toggle sidebar & change button color
 const toggleBtn = document.getElementById('menu-toggle');
 const sidebar = document.getElementById('sidebar');
 toggleBtn.addEventListener('click', () => {
     sidebar.classList.toggle('active');
+    if(sidebar.classList.contains('active')){
+        toggleBtn.style.color = 'white'; // меню открыто
+    } else {
+        toggleBtn.style.color = '#b30000'; // меню закрыто
+    }
 });
 </script>
 
 </body>
 </html>
+
+
 
 
 
