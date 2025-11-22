@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="kk">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORKTAP — Main Page</title>
     <style>
         body {
@@ -23,6 +25,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: all 0.3s;
         }
 
         /* LOGO + NAME */
@@ -79,7 +82,8 @@
         /* Content */
         .content {
             margin-left: 260px;
-            padding: 50px;
+            padding: 20px 40px 40px 40px;
+            transition: margin-left 0.3s;
         }
 
         h1.title {
@@ -125,13 +129,87 @@
             background: #ff4040;
         }
 
+        /* Slider */
+        .slider {
+            width: 100%;
+            max-width: 1200px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* RESPONSIVE */
+        @media screen and (max-width: 1024px) {
+            .sidebar {
+                width: 200px;
+            }
+            .content {
+                margin-left: 220px;
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 10px;
+                box-shadow: none;
+            }
+
+            .logo-box {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 20px 15px;
+            }
+
+            h1.title {
+                font-size: 40px;
+            }
+
+            .slider {
+                height: 250px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1.title {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .tg-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .slider {
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- RIGHT TOP CLOCK -->
     <div class="time-box" id="clock">00:00:00</div>
-
     <script>
         function updateClock() {
             const now = new Date();
@@ -145,39 +223,51 @@
     </script>
 
     <div class="sidebar">
-
         <div class="top-section">
-
-            <!-- LOGO -->
             <div class="logo-box">
                 <img src="https://i.ibb.co/z9dKSRk/Whats-App-Image-2025-11-20-at-14-24-17-0abb1809.jpg" alt="Logo">
                 <div class="company-name">WORK TAP</div>
             </div>
-
             <div class="menu">
                 <a href="project.html">Проект</a>
                 <a href="schedule.html">Кесте</a>
                 <a href="lessons.html">Сабақтар</a>
             </div>
-
         </div>
-
-        <!-- CONTACTS -->
         <div class="contact-box">
             <p>Email: <a href="mailto:simplexo36@gmail.com">simplexo36@gmail.com</a></p>
             <p>Phone: +7 778 651 93 37</p>
-            <p> <a href="https://t.me/WORK_TAP_BOT" target="_blank"></a></p>
+            <p><a href="https://t.me/WORK_TAP_BOT" target="_blank">Біздің чат ботқа қосыл!</a></p>
         </div>
-
     </div>
 
     <div class="content">
+        <div class="slider">
+            <img id="slide-img" src="https://i.ibb.co.com/DHDpyFfq/Screenshot-2025-11-22-182304.png">
+        </div>
+        <script>
+            const images = [
+                "https://i.ibb.co.com/DHDpyFfq/Screenshot-2025-11-22-182304.png",
+                "https://i.ibb.co.com/Psg8rbbC/Screenshot-2025-11-22-182430.png",
+                "https://i.ibb.co.com/KcNxWDH7/logo-html-5-css-javascript-source-code-for-the-taking-23-1.png",
+                "https://i.ibb.co.com/GDFn3Cn/Screenshot-2025-11-22-182801.png",
+                "https://i.ibb.co.com/fd0ZgF32/1725880873576-1.png",
+                "https://i.ibb.co.com/Mkd8rb0Q/1669896371-microsoft-excel-story-1.png",
+                "https://i.ibb.co.com/4ZWFy8JS/6e3d19ed7de6ab8ef4f0db3279ffe551-1.png"
+            ];
+
+            let current = 0;
+            setInterval(() => {
+                current = (current + 1) % images.length;
+                document.getElementById("slide-img").src = images[current];
+            }, 3000);
+        </script>
+
         <h1 class="title">WORKTAP</h1>
         <p>WORKTAP — жастарға арналған заманауи жұмыс және білім алаңы.
 Бұл жерде сен өз жобаларыңды басқаруға, сабақтарыңды жоспарлауға және күнделікті тапсырмаларды тиімді орындауға мүмкіндік аласың.
 Барлығы бір жерде. Барлығы сен үшін.</p>
 
-        <!-- Telegram bot button -->
         <a href="https://t.me/WORK_TAP_BOT" target="_blank" class="tg-button">
             Біздің чат ботқа қосыл! 🤖
         </a>
@@ -185,4 +275,6 @@
 
 </body>
 </html>
+
+
 
